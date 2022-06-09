@@ -1,3 +1,51 @@
-body {
 
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+h1,
+h2,
+p,
+body {
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+
+
+}
+.flex {
+  display: flex;
+}
+
+img {
+  max-width: 200px;
+}
+
+.jugador {
+  flex-direction: column;
+}
+
+.container {
+  flex-direction: column;
+  align-items: center;
+}
+.los-numeros {
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.nombre-persona {
+  text-align: center;
+  font-size: 2rem;
 }
