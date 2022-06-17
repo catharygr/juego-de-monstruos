@@ -58,6 +58,7 @@ class Personaje {
 // *************
 
 function finalDeJuego() {
+  document.querySelector('#btn').style.display = 'none'
   if(boni.energia > 0) {
     document.querySelector('#batalla').innerHTML = 
     `
@@ -95,7 +96,6 @@ function reducirPuntos(elArray) {
   return elArray.reduce( (acc, num) =>  acc + num)
 }
 
-document.querySelector('#btn').addEventListener('click', atacar)
 function atacar() {
   boni.aCargar = false
   elMalo.aCargar = false
@@ -109,6 +109,8 @@ function atacar() {
 
 const boni = new Personaje(data.boni)
 let elMalo = new Personaje(data[losMalos.shift()])
+
+document.querySelector('#btn').addEventListener('click', atacar)
 
 boni.generarNuevosNumeros()
 elMalo.generarNuevosNumeros()
